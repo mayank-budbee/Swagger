@@ -3,8 +3,6 @@ package com.example.swagger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
@@ -17,7 +15,8 @@ public class SpringFoxConfig {
 
     @Bean
     public Docket postsApi() {
-        return new Docket(DocumentationType.SWAGGER_2).groupName("public-api")
+        return new Docket(DocumentationType.SWAGGER_2)
+            .groupName("public-api")
             .apiInfo(apiInfo()).select().build();
     }
 
@@ -25,7 +24,8 @@ public class SpringFoxConfig {
         return new ApiInfoBuilder().title("budbee Trafiki API")
             .description("To see realtime routes")
             .termsOfServiceUrl("http://javainuse.com")
-            .contact(new Contact("mayank", "http://localhost/document", "javainuse@gmail.com")).license("JavaInUse License")
+            .contact(new Contact("mayank", "http://localhost/document", "javainuse@gmail.com"))
+            .license("JavaInUse License")
             .licenseUrl("javainuse@gmail.com").version("1.0").build();
     }
 
