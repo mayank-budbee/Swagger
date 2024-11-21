@@ -9,3 +9,6 @@ http://localhost:8080/swagger-ui.html?queryConfigEnabled=true&url=http://localho
 http://localhost:8080/swagger-ui.html?url=http://localhost:8080/v3/api-docs
 
 Disabled : queryConfigEnabled, so any url can't be used. We need to add swagger-ui dependency to the code.
+
+test
+me
